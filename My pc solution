@@ -1,3 +1,27 @@
 /*How to MS activation */
 https://youtu.be/QlFr2RmEnjc
 
+
+-> Step 1: Open cmd program with administrator rights.
+
+-> Step 2:  Get into the Office directory in cmd.
+
+      cmd:   cd /d %ProgramFiles(x86)%\Microsoft Office\Office16
+             cd /d %ProgramFiles%\Microsoft Office\Office16
+
+-> Step 3: Install Office 2021 volume license.
+      cmd:   for /f %x in ('dir /b ..\root\Licenses16\ProPlus2021VL_KMS*.xrm-ms') do cscript ospp.vbs /inslic:"..\root\Licenses16\%x"
+
+-> Step 4: Activate your Office using the KMS key.
+
+Make sure your device is connected to the internet, then run the following commands.
+
+      cmd:   cscript ospp.vbs /setprt:1688
+
+             cscript ospp.vbs /unpkey:6F7TH >nul
+
+             cscript ospp.vbs /inpkey:FXYTK-NJJ8C-GB6DW-3DYQT-6F7TH
+
+             cscript ospp.vbs /sethst:kms8.MSGuides.com
+
+             cscript ospp.vbs /act
